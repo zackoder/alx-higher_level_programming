@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-
-
-
-class Square:
-    
-
-    def __init__(self, size):
-
-        self.__size = size
+def safe_print_integer(value):
+    try:
+        print("{:d}".format(value))
+    except(ValueError, TypeError):
+        return False
+    else:
+        return True
